@@ -13,4 +13,17 @@ let gameOver = false;
 scoreMaximun.addEventListener("change",() => {
     scoreWin = parseInt(scoreMaximun.value);
     resetGame();
-})
+});
+
+buttonP1.addEventListener("click", () => {
+    if (!gameOver){
+        scoreP1++;
+        scorePlayer1.textContent = scoreP1;
+        if (scoreP1 === scoreWin){
+            gameOver = true;
+            scorePlayer1.classList.add("Gagner");
+            scorePlayer2.classList.add("Perdu");
+        }
+    }
+});
+
