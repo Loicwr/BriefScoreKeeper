@@ -27,3 +27,15 @@ buttonP1.addEventListener("click", () => {
     }
 });
 
+buttonP2.addEventListener("click", () => {
+    if (!gameOver){
+        scoreP2++;
+        scorePlayer2.textContent = scoreP2;
+        if (scoreP2 === scoreWin){
+            gameOver = true;
+            scorePlayer2.classList.add("Gagner");
+            scorePlayer1.classList.add("Perdu");
+        }
+    }
+});
+
