@@ -25,7 +25,7 @@ buttonP1.addEventListener("click", () => {
             scorePlayer1.classList.add("gagnant");
             scorePlayer2.classList.add("perdu");
             alert("Joueur 1 a gagné !");
-            messageGagnant.textContent = "🎉 Joueur 1 a gagné !";
+            messageGagnant.textContent = "Joueur 1 a gagné !";
         }
     }
 });
@@ -39,7 +39,7 @@ buttonP2.addEventListener("click", () => {
             scorePlayer2.classList.add("gagnant");
             scorePlayer1.classList.add("perdu");
             alert("Joueur 2 a gagné !");
-            messageGagnant.textContent = "🎉 Joueur 2 a gagné !";
+            messageGagnant.textContent = "Joueur 2 a gagné !";
         }
     }
 });
