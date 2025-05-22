@@ -39,3 +39,14 @@ buttonP2.addEventListener("click", () => {
     }
 });
 
+buttonReset.addEventListener("click", resetGame);
+
+function resetGame(){
+    scoreP1 = 0;
+    scoreP2 = 0;
+    gameOver = false;
+    scorePlayer1.textContent = 0;
+    scorePlayer2.textContent = 0;
+    scorePlayer1.classList.remove("Gagner", "Perdu");
+    scorePlayer2.classList.remove("Gagner", "Perdu");
+}
