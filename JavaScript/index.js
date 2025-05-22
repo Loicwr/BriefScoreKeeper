@@ -22,9 +22,10 @@ buttonP1.addEventListener("click", () => {
         scorePlayer1.textContent = scoreP1;
         if (scoreP1 === scoreWin){
             gameOver = true;
-            scorePlayer1.classList.add("Gagner");
-            scorePlayer2.classList.add("Perdu");
-            messageGagnant.textContent = "Joueurs 1 a gagné !";
+            scorePlayer1.classList.add("gagnant");
+            scorePlayer2.classList.add("perdu");
+            alert("Joueur 1 a gagné !");
+            messageGagnant.textContent = "🎉 Joueur 1 a gagné !";
         }
     }
 });
@@ -35,9 +36,10 @@ buttonP2.addEventListener("click", () => {
         scorePlayer2.textContent = scoreP2;
         if (scoreP2 === scoreWin){
             gameOver = true;
-            scorePlayer2.classList.add("Gagner");
-            scorePlayer1.classList.add("Perdu");
-            messageGagnant.textContent = "Joueur 2 a gagné !";
+            scorePlayer2.classList.add("gagnant");
+            scorePlayer1.classList.add("perdu");
+            alert("Joueur 2 a gagné !");
+            messageGagnant.textContent = "🎉 Joueur 2 a gagné !";
         }
     }
 });
@@ -50,7 +52,7 @@ function resetGame(){
     gameOver = false;
     scorePlayer1.textContent = 0;
     scorePlayer2.textContent = 0;
-    scorePlayer1.classList.remove("Gagner", "Perdu");
-    scorePlayer2.classList.remove("Gagner", "Perdu");
+    scorePlayer1.classList.remove("Gagnant", "Perdu");
+    scorePlayer2.classList.remove("Gagnant", "Perdu");
     messageGagnant.textContent = "";
 }
