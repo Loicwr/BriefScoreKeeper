@@ -4,6 +4,7 @@ let buttonReset = document.getElementById("buttonReset");
 let scorePlayer1 = document.getElementById("scorePlayer1");
 let scorePlayer2 = document.getElementById("scorePlayer2");
 let scoreMaximun = document.getElementById("scoreMaximun");
+let messageGagnant = document.getElementById("messageGagnant")
 
 let scoreP1 = 0;
 let scoreP2 = 0;
@@ -23,6 +24,7 @@ buttonP1.addEventListener("click", () => {
             gameOver = true;
             scorePlayer1.classList.add("Gagner");
             scorePlayer2.classList.add("Perdu");
+            messageGagnant.textContent = "Joueurs 1 a gagné !";
         }
     }
 });
@@ -35,6 +37,7 @@ buttonP2.addEventListener("click", () => {
             gameOver = true;
             scorePlayer2.classList.add("Gagner");
             scorePlayer1.classList.add("Perdu");
+            messageGagnant.textContent = "Joueur 2 a gagné !";
         }
     }
 });
@@ -49,4 +52,5 @@ function resetGame(){
     scorePlayer2.textContent = 0;
     scorePlayer1.classList.remove("Gagner", "Perdu");
     scorePlayer2.classList.remove("Gagner", "Perdu");
+    messageGagnant.textContent = "";
 }
